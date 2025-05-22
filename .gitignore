@@ -1,40 +1,166 @@
-# Dependencies
+# ===================================
+# 🐾 Tamagotchi NFT - .gitignore
+# ===================================
+
+# ===== DEPENDENCIES =====
 node_modules/
 */node_modules/
+.pnpm-store/
 
-# Build outputs
+# ===== YARN CONFIGURATION (evita problemas cross-platform) =====
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.yarn/releases/
+.yarn/plugins/
+.yarnrc.yml
+.pnp.*
+
+# ===== NPM =====
+npm-debug.log*
+.npm/
+
+# ===== BUILD OUTPUTS =====
+# Cairo/Starknet builds (se regeneran con scarb build)
 **/target/
+**/.scarb/
 dist/
 build/
+out/
 
-# Environment files
+# Next.js
+.next/
+.swc/
+
+# ===== ENVIRONMENT & SECRETS =====
+# NUNCA subir keys privadas o secrets
 .env
 .env.local
+.env.development.local
+.env.test.local
+.env.production.local
 .env.production
 **/.env
+**/.env.*
 
-# IDE files
-.vscode/
+# ===== DEPLOYMENT ARTIFACTS =====
+# Se regeneran con yarn deploy
+deployments/*.json
+!deployments/.gitkeep
+!deployments/README.md
+
+# ===== IDE & EDITORS =====
+# VSCode settings personales
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+.vscode/extensions.json
+
+# Mantener configuración del Dev Container
+!.vscode/
+!.devcontainer/
+
+# Otros IDEs
 .idea/
+*.swp
+*.swo
+*~
 
-# OS files
+# ===== OS FILES =====
+# macOS
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Windows
 Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
 
-# Logs
-*.log
+# Linux
+*~
+.nfs*
+
+# ===== LOGS =====
 logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
 
-# Cache
+# ===== RUNTIME & CACHE =====
 .cache/
-.npm/
-.yarn/
-**/.scarb/
+.parcel-cache/
+.turbo/
+.nuxt/
+.vuepress/dist/
 
-# Deployment artifacts
-deployments/
-artifacts/
+# ===== TEST COVERAGE =====
+coverage/
+*.lcov
+.nyc_output/
+lib-cov/
 
-# Temporary files
+# ===== TEMPORARY FILES =====
 *.tmp
 *.temp
+*.tgz
+*.tar.gz
+.tmp/
+tmp/
+
+# ===== STARKNET SPECIFIC =====
+# Starknet accounts (pueden contener info sensible)
+accounts.json
+keystore/
+.starknet/
+
+# Cairo compilation artifacts
+cairo_programs/
+*.sierra
+*.casm
+
+# ===== DOCKER =====
+# Mantener archivos de configuración Docker
+!Dockerfile
+!docker-compose.yml
+!.dockerignore
+
+# Pero excluir volúmenes y logs
+docker-compose.override.yml
+.docker/
+
+# ===== BACKUP FILES =====
+*.bak
+*.backup
+*.old
+*.orig
+
+# ===== MISC =====
+.sass-cache/
+connect.lock/
+typings/
+.eslintcache
+.stylelintcache
+
+# ===== MANTENER ARCHIVOS IMPORTANTES =====
+# Estos archivos SON necesarios para el proyecto
+!package.json
+!yarn.lock
+!package-lock.json
+!**/Scarb.toml
+!tsconfig.json
+!next.config.js
+!tailwind.config.js
+!.gitignore
+!README.md
+!LICENSE
