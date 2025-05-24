@@ -3862,9 +3862,10 @@ __metadata:
     ethers: ^6.12.0
     get-starknet-core: ^4.0.0
     jsdom: ^26.0.0
+    lucide-react: latest
     next: 15.2.4
     next-pwa: ^5.6.0
-    next-themes: ^0.2.1
+    next-themes: latest
     nprogress: ^0.2.0
     postcss: ^8
     prettier: ^3.4.2
@@ -9782,6 +9783,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lucide-react@npm:^0.511.0, lucide-react@npm:latest":
+  version: 0.511.0
+  resolution: "lucide-react@npm:0.511.0"
+  peerDependencies:
+    react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: b347d276c1a8cdc51f6ca44ef09d51a3a916bfb58ef0a0d55c729b1afb54877c1bbad981313984751ea13e4cc9903bfeae346f112184c94158a5a39274daea65
+  languageName: node
+  linkType: hard
+
 "lz-string@npm:^1.5.0":
   version: 1.5.0
   resolution: "lz-string@npm:1.5.0"
@@ -10226,14 +10236,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-themes@npm:^0.2.1":
-  version: 0.2.1
-  resolution: "next-themes@npm:0.2.1"
+"next-themes@npm:^0.4.6, next-themes@npm:latest":
+  version: 0.4.6
+  resolution: "next-themes@npm:0.4.6"
   peerDependencies:
-    next: "*"
-    react: "*"
-    react-dom: "*"
-  checksum: ebc248b956138e73436c4ed0a0f0a877a0a48a33156db577029b8b8469e48b5c777d61abf2baeb75953378febea74e067a4869ff90b4a3e94fce123289b862ba
+    react: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
+    react-dom: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
+  checksum: 295256ee5689629e6578ff4f10f163257172085cac0a250f5f81eae5791fde984a0398be09b959a90c12cf72cf95e82ae11fad6fe13edc4e2d2a6ec2734be0cd
   languageName: node
   linkType: hard
 
@@ -12392,6 +12401,8 @@ __metadata:
   dependencies:
     daisyui: ^4.7.3
     husky: ^9.0.11
+    lucide-react: ^0.511.0
+    next-themes: ^0.4.6
     pinst: ^3.0.0
     postcss: ^8.4.38
     prettier: ^3.2.5
