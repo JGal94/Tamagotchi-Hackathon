@@ -1,26 +1,19 @@
-import type { Metadata } from "next";
-import { ScaffoldStarkAppWithProviders } from "~~/components/ScaffoldStarkAppWithProviders";
-import "~~/styles/globals.css";
-import { ThemeProvider } from "~~/components/ThemeProvider";
+import './globals.css';
+import { ThemeProvider } from 'next-themes';
 
-export const metadata: Metadata = {
-  title: "Scaffold-Stark",
-  description: "Fast track your starknet journey",
-  icons: "/logo.ico",
+export const metadata = {
+  title: 'Tamagotchi NFT',
+  description: 'Cría y cuida tu Tamagotchi NFT en Starknet'
 };
 
-const ScaffoldStarkApp = ({ children }: { children: React.ReactNode }) => {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html suppressHydrationWarning>
-      <body suppressHydrationWarning>
+    <html lang="es">
+      <body className="bg-gradient-to-br from-purple-100 to-blue-100 p-4 min-h-screen">
         <ThemeProvider enableSystem>
-          <ScaffoldStarkAppWithProviders>
-            {children}
-          </ScaffoldStarkAppWithProviders>
+          {children}
         </ThemeProvider>
       </body>
     </html>
   );
-};
-
-export default ScaffoldStarkApp;
+}
